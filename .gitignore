@@ -1,0 +1,17 @@
+# Binaries for the current project
+.env
+
+# Test binaries
+*_test
+
+# Build outputs
+/bin/
+/pkg/
+
+# Go module cache and build cache
+.cache/
+go.sum
+go.mod
+
+# Editor and IDE specific files
+.vscode/

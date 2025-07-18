@@ -1,4 +1,3 @@
-// internal/repositories/bioskop_repository.go
 package repositories
 
 import (

@@ -4,18 +4,18 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Success(c *gin.Context, code int, data interface{}, message string) {
+func Success(c *gin.Context, code int, data any, message string) {
 	c.JSON(code, gin.H{
 		"code":    code,
 		"data":    data,
-		"messege": message,
+		"message": message,
 	})
 }
 
-func Error(c *gin.Context, code int, message string, data interface{}) {
+func Error(c *gin.Context, code int, data any, message string) {
 	c.JSON(code, gin.H{
 		"code":    code,
 		"data":    data,
-		"messege": message,
+		"message": message,
 	})
 }

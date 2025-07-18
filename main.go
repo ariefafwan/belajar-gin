@@ -4,14 +4,17 @@ import (
 	"belajar-gin/config"
 	"belajar-gin/routers"
 	"fmt"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	config.LoadEnv()
 	config.ConnectDB()
-	config.InitValidator()
 
-	var router = routers.SetupRouter()
-	router.Run(":8080")
+	r := gin.Default()
+	routers.SetupRouters(r)
+
+	r.Run(":8080")
 	fmt.Println("Server berjalan di")
 }
