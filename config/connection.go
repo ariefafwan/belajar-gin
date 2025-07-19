@@ -14,12 +14,12 @@ var DB *gorm.DB
 
 func ConnectDB() {
     dsn := fmt.Sprintf(
-        "host=%s user=%s password=%s dbname=%s port=%s sslmode=disable search_path=public",
+        "host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
         GetEnv("DB_HOST", "localhost"),
+        GetEnv("DB_PORT", "5432"),
         GetEnv("DB_USER", "postgres"),
         GetEnv("DB_PASSWORD", ""),
         GetEnv("DB_NAME", "sanbercode"),
-        GetEnv("DB_PORT", "5432"),
     )
 
     db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})

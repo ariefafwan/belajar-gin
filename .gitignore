@@ -1,5 +1,5 @@
 # Binaries for the current project
-.env
+# .env
 
 # Test binaries
 *_test
@@ -10,8 +10,8 @@
 
 # Go module cache and build cache
 .cache/
-go.sum
-go.mod
+# go.sum
+# go.mod
 
 # Editor and IDE specific files
 .vscode/
